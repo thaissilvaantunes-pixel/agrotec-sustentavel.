@@ -1,1 +1,119 @@
 
+html<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte - Futuro Sustentável | Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>🌱 Agro Forte</h1>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#producao">Produção</a></li>
+                <li><a href="#diagnostico">Scanner Sustentável</a></li>
+                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero" id="inicio">
+            <h2>Agro Forte, Futuro Sustentável</h2>
+            <p>
+                Produção agrícola eficiente aliada à preservação do meio ambiente e tecnologia no campo.
+            </p>
+            <a href="#diagnostico" class="btn-link"><button>Testar Scanner Online</button></a>
+        </div>
+    </header>
+
+    <section id="producao" class="section">
+        <h2>🌾 Produção Responsável e Alinhada à Natureza</h2>
+        <p>
+            O agronegócio é essencial para alimentar o mundo. Com tecnologia e inovação, é possível aumentar a produtividade das culturas reduzindo os impactos ambientais através do Manejo Integrado de Pragas (MIP) e do uso correto de bioinsumos.
+        </p>
+    </section>
+
+    <!-- NOVA SEÇÃO: O Scanner de Doenças com Foco Sustentável -->
+    <section id="diagnostico" class="section scanner-section">
+        <h2>🔍 Diagnóstico de Doenças Fitossanitárias</h2>
+        <p>Simulação de tecnologia de campo: selecione a cultura e envie uma foto para receber um diagnóstico rápido com tratamentos ecológicos protetores do meio ambiente.</p>
+        
+        <div class="scanner-container">
+            <label for="cultura">Selecione a Cultura Rural:</label>
+            <select id="cultura">
+                <option value="soja">Soja (Ex: Ferrugem Asiática)</option>
+                <option value="milho">Milho (Ex: Lagarta-do-Cartucho)</option>
+                <option value="cafe">Café (Ex: Ferrugem do Cafeeiro)</option>
+            </select>
+
+            <label for="foto-planta" class="custom-file-upload">
+                📸 Escolher Foto da Planta
+            </label>
+            <input type="file" id="foto-planta" accept="image/*">
+            
+            <button onclick="simularDiagnostico()" class="btn-analisar">Analisar Folha/Cultura</button>
+
+            <!-- O JavaScript vai injetar o resultado aqui dentro -->
+            <div id="resultado" class="resultado-box hidden"></div>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="section destaque">
+        <h2>🌎 Sustentabilidade Ambiental e Práticas Verdes</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>💧 Uso Consciente da Água</h3>
+                <p>Sistemas de irrigação inteligentes e gotejamento preciso reduzem desperdícios nos talhões.</p>
+            </div>
+
+            <div class="card">
+                <h3>🌳 Preservação das Florestas</h3>
+                <p>Proteção das áreas de APP, manutenção das matas ciliares e recuperação ativa de nascentes.</p>
+            </div>
+
+            <div class="card">
+                <h3>♻️ Agricultura Sustentável</h3>
+                <p>Adoção do plantio direto, rotação de culturas e biofertilizantes que equilibram produção e conservação.</p>
+            </div>
+
+            <div class="card">
+                <h3>🐝 Proteção de Polinizadores</h3>
+                <p>Substituição de defensivos químicos agressivos por biológicos, mantendo as abelhas protegidas na lavoura.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>📈 Dados do Agro Sustentável</h2>
+
+        <div class="contador">
+            <div>
+                <span id="numero1">0</span>
+                <p>Produtores Sustentáveis</p>
+            </div>
+
+            <div>
+                <span id="numero2">0</span>
+                <p>Hectares Preservados</p>
+            </div>
+
+            <div>
+                <span id="numero3">0</span>
+                <p>Projetos Ambientais</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <h3>Agro Forte</h3>
+        <p>Produção e Meio Ambiente caminhando juntos.</p>
+        <p>Projeto Agrinho 2026 | Desenvolvido por <strong>Thais Maria da Silva Antunes</strong></p>
+        <p>© 2026 - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
