@@ -1,1 +1,288 @@
 
+CSS/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f9f6;
+    color: #2b3a2f;
+    line-height: 1.6;
+}
+
+/* Menu de Navegação Superior */
+header nav {
+    background-color: #1b4332; /* Verde Escuro Orgânico */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header nav h1 {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #e9f5ed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #52b788; /* Verde Folha no Hover */
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.75), rgba(27, 67, 50, 0.75)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #d8f3dc;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+/* Estilo dos Botões */
+button {
+    background-color: #40916c; /* Verde Médio Sustentável */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #2d6a4f;
+    transform: translateY(-2px);
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+/* Seções de Texto */
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #1b4332;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4a5c50;
+}
+
+/* Seção de Destaque com Cards */
+.destaque {
+    background-color: #e9f5ed;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-top: 4px solid #40916c;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #1b4332;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #556b5c;
+}
+
+/* Área Interativa do Scanner de Doenças */
+.scanner-section {
+    background-color: white;
+}
+
+.scanner-container {
+    background-color: #f2f7f4;
+    border: 2px dashed #40916c;
+    border-radius: 10px;
+    max-width: 550px;
+    margin: 30px auto 0 auto;
+    padding: 30px;
+    text-align: left;
+}
+
+.scanner-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #1b4332;
+}
+
+.scanner-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #b7c9be;
+    background-color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: block;
+    text-align: center;
+    background-color: #b7c9be;
+    color: #1b4332;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #a3b8aa;
+}
+
+.btn-analisar {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.resultado-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff8e7;
+    border-left: 5px solid #ffb703;
+    border-radius: 4px;
+    color: #2b3a2f;
+}
+
+.resultado-box h3 {
+    color: #b7094c;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Área dos Contadores Animados */
+.contador {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contador div {
+    margin: 15px;
+    min-width: 150px;
+}
+
+.contador span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d6a4f;
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    background-color: #112219;
+    color: #b7c9be;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Ajustes para Telas de Celular (Responsividade) */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    header nav ul {
+        margin-top: 15px;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .contador {
+        flex-direction: column;
+    }
+}
